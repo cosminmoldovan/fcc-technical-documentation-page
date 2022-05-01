@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Roboto+Mono:wght@400;500&display=swap');
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --course-background: url("https://img.freepik.com/free-vector/white-abstract-background_23-2148810113.jpg?w=740");
+  --bg-primary: #fff;
+  --bg-secondary: #f5f5f5;
+  --text-primary: #2c2c2c;
+  --text-secondary: #4b4b4b;
+  --text-link: #095aba;
+  --border-color: #e1e1e1;
+  --border: 1px solid var(--border-color);
+}
+html {
+  font-size: 10px;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.75;
+  color: var(--text-primary);
+}
+p {
+  max-width: 70ch;
+}
+a {
+  color: var(--text-link);
+  font-weight: 500;
+}
+h2 {
+  font-size: 2.8rem;
+  font-weight: 400;
+  margin-top: 2rem;
+}
+#navbar {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 350px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-color);
+}
+#nav-header {
+  width: 100%;
+  height: 140px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fafafa;
+  background-image: var(--course-background);
+  background-position: top right;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+.text-gradient {
+  background-color: #fc00ff;
+  background-image: linear-gradient(90deg, #00dbde 0%, #fc00ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.nav-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  overflow-y: auto;
+  background-color:var(--bg-primary);
+}
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 24em;
+  width: 100%;
+  padding: 20px 20px 20px 30px;
+  font-size: 1.6rem;
+  text-decoration: none;
+  color: var(--text-primary);
+  border-bottom: 1px solid #eaeaea;
+  
+}
+.nav-link:hover {
+  background-color: #f5f5f5;
+}
+.nav-link:focus {
+  background-color: #eaeaea;
+}
+#main-doc {
+/*   max-width:1200px; */
+  width: calc(100% - 350px);
+  margin-left: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px 24px 24px 0;
+}
+.main-section{
+ padding-top:32px;
+}
+.main-section header {
+  width: 100%;
+  margin-top:24px;
+  font-size: 3.6rem;
+  line-height: 1.2;
+}
+.main-section ul {
+  width: 100%;
+  padding-left: 2rem;
+  margin-top: 2rem;
+}
+.main-section ul li {
+  font-size: 1.7rem;
+}
+.main-section p {
+  font-size: 1.7rem;
+  margin-top: 2rem;
+}
+@media (min-width: 1500px){
+  html {
+  font-size: 15px;
+  }
+}
+@media (max-width:1200px){
+  #navbar{
+    width:300px;
+  }
+}
+@media (max-width: 800px) {
+  body{
+    scroll-padding: 100px;
+  }
+  #navbar {
+    width: 100%;
+/*     position: relative; */
+  }
+  #nav-header {
+    height: 70px;
+    position:fixed;
+  }
+  .nav-list {
+    width:90%;
+    margin:0 auto;
+    margin-top:70px;
+    height: 400px;
+    border: 1px solid #e1e1e1;
+    display:none;
+    box-shadow:0 8px 8px rgba(0,0,0,0.3);
+    border-radius: 0 0 8px 8px;
+  }
+  #nav-btn{
+    display:flex;
+    flex-direction:column;
+    gap:5px;
+    margin-right:40px;
+    background-color:var(--bg-primary);
+    padding:6px 4px;
+    border-radius:4px;
+    border:var(--border);
+    cursor:pointer;
+  }
+  .bar{
+    width:24px;
+    height:2px;
+    background-color:var(--text-primary);
+  }
+  .display-nav{
+    display:flex;
+  }
+  #main-doc {
+    width: 100%;
+    margin-left: 0;
+    padding: 24px;
+    margin-top:20px;
+  }
+}
+@media (max-width: 600px) {
+  .main-section header {
+    font-size: 3.2rem;
+  }
+  .main-section p {
+    font-size: 1.6rem;
+  }
+}
+@media (max-width: 400px) {
+  html{
+    font-size:9px;
+  }
+}
+code,
+mark {
+  background-color: var(--bg-secondary);
+  border: var(--border);
+  border-radius: 4px;
+}
+code {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  margin-top: 2rem;
+  font-family: "Roboto Mono", monospace;
+  font-size: 1.3rem;
+  color: var(--text-secondary);
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+mark {
+  padding: 0 4px;
+}
